@@ -4,5 +4,5 @@ title: About
 permalink: /about/
 ---
 
-Change this text with information about me and my blog.
+I'm Stephanie, a student studying statistics, data science, linguistics, and Korean. I am interested in Natural Language Processing and computer translation.
 
