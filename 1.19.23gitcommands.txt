@@ -1,0 +1,62 @@
+   23  git config --global user.name
+   24  git config --global user.name "Steph"
+   25  git config --global user.name steph
+   26  git config --global user.email 
+   27  git config --global user.email slynndersen@gmail.com
+   28  git config --global core.editor "code -wait"
+   30  git config --list
+   31  git confid --global core.editor "code -wait"
+   32  git config --global core.editor "code -wait"
+   33  git config --list
+   34  git config --global init.defaultBranch master
+   36  git init
+   37  git --version
+   39  git init
+   43  history | grep "git" > git_commands.txt
+   45  cd git
+   48  cd git
+   49  history 0 | grep "git" > git_commands.txt
+   50  git init
+   51  git config --global user.name "steph"
+   52  git config --global user.email "slynndersen@gmail.com"
+   53  git config --global core.editor "code -wait"
+   54  history 0 | grep "git" > git_commands.txt
+   56  cd git repos
+   67  git init
+   80  git init
+   81  git status
+   85  rm -rf .git
+   87  rm -rf .git
+   91  git status
+   92  git init
+   93  git status
+   94  git add statistics.txt
+   95  git status
+   96  git commit -m 'make first commit
+git commit -m 'make first commit'
+   97  git commit -m 'make first commit'
+   98  git add .
+   99  git status
+  100  git status
+  101  git status
+  102  git commit -a -m 'updated stats'
+  103  git status
+  106  git status
+  107  git status
+  108  git add .
+  109  git status
+  110  git commit -m 'add files'
+  111  git status
+  112  git log
+  113  git log --oneline
+  115  git status
+  116  git status
+  117  git status
+  119  git add .gitignore
+  120  git commit -m 'add .gitignore file'
+  121  git status 
+  122  git remote -v
+  136  history 0 | grep "git" > git_commands.txt
+  139  history 0 | grep "git" > git_commands.txt
+  140  history 0 | grep "git" > git_commands.txt
+  141  history | grep "git" > git_commands.txt
