@@ -13,4 +13,3 @@ I haven't thought too seriously about which book to read or what to write for my
 Images really capture the eye. Here's a picture of one of my favorite memes. It's a screenshot from a video of John Cena speaking in Mandarin about how he likes ice cream. The meme popularized under the name "Bing Chilling," an English jokesy take on the pinyin "bīng qí lín," meaning "ice cream."
 
 ![Figure](https://images.genius.com/b7856ba4b9670f426d8b347b3fc20a52.403x363x1.png)
-
