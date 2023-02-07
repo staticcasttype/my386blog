@@ -29,7 +29,7 @@ One way is I can go into the game manually, load up the practice tool on all 162
 
 Perhaps you can find the information online. Marvelous! But it is not a downloadable csv file. We could copy each cell of the data frame and create our own replica CSV. But I haven't forgotten to be lazy. If only there were a way we could extract this table directly from the website...
 
-![Figure](/assets/images/championtable.jpg)
+![Figure](C:\Users\thatj\386\my386blog\assets\images\championtable.png)
 
 
 
@@ -45,6 +45,8 @@ You will need two libraries to extract a table from a webpage. You will need the
 import pandas as pd
 import requests
 ```
+
+The *pandas*
 
 
 
