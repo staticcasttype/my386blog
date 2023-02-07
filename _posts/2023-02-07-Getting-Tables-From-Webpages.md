@@ -3,35 +3,41 @@ layout: post
 title:  "How to Get a Table from a Webpage"
 author: Stephanie Clark
 description: A League of Legends themed data extraction technique.
-image: /assets/images/championtable.jpg
+image: /assets/images/rell.png
 ---
 
-![Figure](https://technology.riotgames.com/sites/default/files/lcu_ui_ready_check.gif)
+### Queueing Up
+# The Overview
 
-# Queueing Up: The Overview
+![Figure](https://technology.riotgames.com/sites/default/files/lcu_ui_ready_check.gif)
 
 Today I will give an overview of how to grab an existing table from a website for use in data analysis. This is useful because using already collected data saves time, but as beginner python users we don't know how to deal with data that isn't readily available in CSV form.
 
 
-![Figure](https://assets.change.org/photos/5/pd/rq/TyPDRqCIMrGqZAB-800x450-noPad.jpg?1589776095)
 
-# The Draft: Background
+## The Draft
+# Background
+
+![Figure](https://assets.change.org/photos/5/pd/rq/TyPDRqCIMrGqZAB-800x450-noPad.jpg?1589776095)
 
 I'm a huge fan of the popular MOBA game League of Legends. Say I want to analyze the roster of champions with their base stats. Perhaps this data doesn't exist in an easily consumable form already, so what are the ways I could go about obtaining this data?
 
-![Figure](https://i.stack.imgur.com/J66uz.png)
-
 One way is I can go into the game manually, load up the practice tool on all 162 champions, and record the champions stats at each of the 18 levels with the same runes. This method is perfectly viable, but-like most people in Data Science-I'm lazy. And since you're here, it seems as though you are too. Let's think about something else.
 
-![Figure](/assets/images/championtable.jpg)
+![Figure](https://i.stack.imgur.com/J66uz.png)
 
 Eureka! We found the information online. Marvelous! But it is not a downloadable csv file. We could copy each cell of the data frame and create our own replica CSV. But I haven't forgotten to be lazy. If only there were a way we could extract this table directly from the website...
 
+![Figure](/assets/images/championtable.jpg)
+
+
+
+## The Laning Phase
+# The Libraries You Need
 
 ![Figure](https://miro.medium.com/max/1200/1*gON3peBAScOzoTRjZndloQ.jpeg)
 
-# The Laning Phase: The Libraries You Need
-
+You will need two libraries to extract a table from a webpage. You will need the *python* and the *request* libraries. You can 
 
 ## Steps for creating a new post.  
 
