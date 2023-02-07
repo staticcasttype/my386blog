@@ -6,8 +6,8 @@ description: A League of Legends themed data extraction technique.
 image: /assets/images/rell.png
 ---
 
-### Queueing Up
 # The Overview
+### Queueing Up
 
 ![Figure](https://technology.riotgames.com/sites/default/files/lcu_ui_ready_check.gif)
 
@@ -15,74 +15,49 @@ Today I will give an overview of how to grab an existing table from a website fo
 
 
 
-## The Draft
+
 # Background
+### The Draft
 
 ![Figure](https://assets.change.org/photos/5/pd/rq/TyPDRqCIMrGqZAB-800x450-noPad.jpg?1589776095)
 
 I'm a huge fan of the popular MOBA game League of Legends. Say I want to analyze the roster of champions with their base stats. Perhaps this data doesn't exist in an easily consumable form already, so what are the ways I could go about obtaining this data?
 
-One way is I can go into the game manually, load up the practice tool on all 162 champions, and record the champions stats at each of the 18 levels with the same runes. This method is perfectly viable, but-like most people in Data Science-I'm lazy. And since you're here, it seems as though you are too. Let's think about something else.
+One way is I can go into the game manually, load up the practice tool on all 162 champions, and record the champions stats at each of the 18 levels with the same runes. This method is perfectly viable, but-like most people in Data Science-I'm lazy. And since you're here, it seems as though you are too. Let's consider other options.
 
 ![Figure](https://i.stack.imgur.com/J66uz.png)
 
-Eureka! We found the information online. Marvelous! But it is not a downloadable csv file. We could copy each cell of the data frame and create our own replica CSV. But I haven't forgotten to be lazy. If only there were a way we could extract this table directly from the website...
+Perhaps you can find the information online. Marvelous! But it is not a downloadable csv file. We could copy each cell of the data frame and create our own replica CSV. But I haven't forgotten to be lazy. If only there were a way we could extract this table directly from the website...
 
 ![Figure](/assets/images/championtable.jpg)
 
 
 
-## The Laning Phase
+
 # The Libraries You Need
+### The Laning Phase
 
 ![Figure](https://miro.medium.com/max/1200/1*gON3peBAScOzoTRjZndloQ.jpeg)
 
-You will need two libraries to extract a table from a webpage. You will need the *python* and the *request* libraries. You can 
+You will need two libraries to extract a table from a webpage. You will need the *pandas* and the *request* libraries, as shown below.
 
-## Steps for creating a new post.  
-
-
-
-
-
-
-### Resizing images
-
-There isn't a good way to resize images with markdown, so if you need to resize an image, use the html code to insert your figure (instead of the markdown code):
-
-`<img src="https://raw.githubusercontent.com/esnt/my386blog/main/assets/images/default.jpg" alt="" style="width:400px;"/>`
-
-(Width is 400 pixels)
-<img src="https://raw.githubusercontent.com/esnt/my386blog/main/assets/images/default.jpg" alt="" style="width:400px;"/>
+```
+import pandas as pd
+import requests
+```
 
 
-`<img src="https://raw.githubusercontent.com/esnt/my386blog/main/assets/images/default.jpg" alt="" style="width:100px;"/>`
 
-(Width is 100 pixels)
-<img src="https://raw.githubusercontent.com/esnt/my386blog/main/assets/images/default.jpg" alt="" style="width:100px;"/>
 
----
+# The Code + Explanation
+### Teamfighting for Objectives
 
-## Troubleshooting
+![Figure](https://i.ytimg.com/vi/cL8PnLrwk-g/maxresdefault.jpg)
 
-Here are some things to keep in mind if your blog appearance isn't going as you planned:
 
-**Problem:  The blog post that I created isn't appearing**
 
-Possible Solutions: 
-  - Check your date. GitHub pages won't display blog posts with future dates
-  - Check the yaml header.  If there are any special characters in any of the fields, you need to use quotes around the entire field entry.  The most common culprit is the description.  If you're having trouble, try putting quotes around the entire description
 
----
+# The Final Product
+### GGEZ
 
-**Problem:  I know that I made changes to a blog post but the changes aren't appearing**
-
-Possible Solution:
-  - Check the header.  If there are any special characters in any of the fields, you need to use quotes around the entire field entry.  The most common culprit is the description.  If you're having trouble, try putting quotes around the entire description.
-
----
-
-**Problem:  My entire blog has wierd formatting**
-
-Possible Solution:
-  - Usually this is an address problem.  Double check your url and baseurl in the _config file
+![Figure](https://thumbs.gfycat.com/DelayedSeparateFishingcat-mobile.mp4)
