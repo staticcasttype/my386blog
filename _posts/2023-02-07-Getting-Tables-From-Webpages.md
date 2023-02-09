@@ -6,8 +6,7 @@ description: A League of Legends themed data extraction technique.
 image: /assets/images/rell.png
 ---
 
-# The Overview
-### Queueing Up
+# Queueing Up: The Overview
 
 ![Figure](https://technology.riotgames.com/sites/default/files/lcu_ui_ready_check.gif)
 
@@ -16,8 +15,7 @@ Today I will give an overview of how to grab an existing table from a website fo
 
 
 
-# Background
-### The Draft
+# The Draft: Background
 
 ![Figure](https://assets.change.org/photos/5/pd/rq/TyPDRqCIMrGqZAB-800x450-noPad.jpg?1589776095)
 
@@ -27,15 +25,16 @@ One way is I can go into the game manually, load up the practice tool on all 162
 
 ![Figure](https://i.stack.imgur.com/J66uz.png)
 
-Perhaps you can find the information online. Marvelous! But it is not a downloadable csv file. We could copy each cell of the data frame and create our own replica CSV. But I haven't forgotten to be lazy. If only there were a way we could extract this table directly from the website...
+Perhaps you can find the information online. Marvelous! It's even sorted out...
 
-![Figure](C:\Users\thatj\386\my386blog\assets\images\championtable.png)
+![Figure](https://i.imgur.com/ngq1E56.png)
+
+...but it is not a downloadable csv file. We could copy each cell of the data frame and create our own replica CSV. But I haven't forgotten to be lazy. If only there were a way we could extract this table directly from the website...
 
 
 
 
-# The Libraries You Need
-### The Laning Phase
+# The Laning Phase: The Libraries You Need
 
 ![Figure](https://miro.medium.com/max/1200/1*gON3peBAScOzoTRjZndloQ.jpeg)
 
@@ -46,20 +45,49 @@ import pandas as pd
 import requests
 ```
 
-The *pandas*
+### Pandas
+A software library written for Python. Enables better data manipulation and analysis.
+
+### Requests
+Requests is a HTTP library for the Python programming language. The goal of the project is to make HTTP requests simpler and more human-friendly.
 
 
 
 
-# The Code + Explanation
-### Teamfighting for Objectives
+
+# Teamfighting for Objectives: The Code + Explanation
 
 ![Figure](https://i.ytimg.com/vi/cL8PnLrwk-g/maxresdefault.jpg)
 
+```
+url = '<insert URL of the webpage here>'
 
+# Make a request to the website and retrieve the HTML content
+response = requests.get(url)
+html_content = response.content
+```
+
+You can use the pandas library in Python to extract tables from a webpage. One way to do this is to use the read_html function from the pandas library, which parses an HTML string and extracts any tables found.
+
+```
+# Use pandas to parse the HTML content and extract any tables
+tables = pd.read_html(html_content)
+```
+
+The `read_html` function returns a list of DataFrames, so you can access the first table like this:
+
+```
+df = tables[0]
+```
 
 
 # The Final Product
 ### GGEZ
 
-![Figure](https://thumbs.gfycat.com/DelayedSeparateFishingcat-mobile.mp4)
+![Figure](https://giphy.com/gifs/google-wr-wild-rift-wildrift-tM76xlB5idOYRwB0wR)
+
+If you've followed the code above, then you now should have a workable pandas dataframe to manipulate your data with, as shown.
+
+![Figure](https://i.imgur.com/pwcp1ZP.png)
+
+Happy Coding!
