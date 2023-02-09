@@ -84,7 +84,7 @@ df = tables[0]
 # The Final Product
 ### GGEZ
 
-![Figure](https://giphy.com/gifs/google-wr-wild-rift-wildrift-tM76xlB5idOYRwB0wR)
+![Figure](https://cdn.sanity.io/images/ccckgjf9/production/9bb232cf222c6059cc960b9da174277016209bfb-1250x703.png?w=1920&h=1080&fit=max&auto=format)
 
 If you've followed the code above, then you now should have a workable pandas dataframe to manipulate your data with, as shown.
 
