@@ -81,8 +81,7 @@ df = tables[0]
 ```
 
 
-# The Final Product
-### GGEZ
+# GGEZ: The Final Product
 
 ![Figure](https://cdn.sanity.io/images/ccckgjf9/production/9bb232cf222c6059cc960b9da174277016209bfb-1250x703.png?w=1920&h=1080&fit=max&auto=format)
 
