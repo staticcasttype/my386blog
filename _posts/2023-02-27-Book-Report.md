@@ -2,8 +2,8 @@
 layout: post
 title:  "Opinion: Weapons of Math Destruction by Cathy O'Neil"
 author: Stephanie Clark
-description: A lighthearted practice blog for my first homework assignment.
-image: /assets/images/bookreport.jpg
+description: A few of my opinions on the famous book by Cathy O'Neil.
+image: /assets/images/bookreport.png
 ---
 
 ![Figure](https://npr.brightspotcdn.com/legacy/sites/kalw/files/201610/cathy_oneil-620x412.jpg)
