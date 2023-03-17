@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Data Collection: Vision Score and Win Condition"
-author: Shannon Tass
+author: Stephanie Clark
 description: I used the Riot Games API to collect match data on both low elo and professional LoL players to see if we could explore any correlation between vision scoring and win conditions.
-image: /assets/images/ward.png
+image: /assets/images/wards.png
 ---
 
 # Introduction
@@ -80,92 +80,81 @@ puuids = ['HXXcmPG5mKETeTvMkA_T3rv5gKGhz8wogsCUWv0aNdKKrSBKe20_NokHFi3KUqexkA-Js
           'hTuGHUYHBLnVZzV_XzBhTbVS1AkbXIttIxB6UsLat58TN3OuchROJHTHxeHL31Nz2GmsL8TrhiXleg', 'CcEZ4CeuM5hZn9GQW_QUKkljXhHkQlzJ6mOGA36urZ9QlRi33OI7I9H4oTUoCxQ_v-BLThQQy3m6JA']
 ```
 
-## Making Match ID Requests With Account Data
+## Step 4: Requesting MatchIDs With Account Data
 
-Next, I made two, or however many dictionaries you made to break up request times, separate lists to store the matchIDs.
+Next, I made two, or however many dictionaries you made to break up request times, separate lists to store the matchIDs. For ease of running, I duplicated the loops and changed the names of the lists to match.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-1. Create a new file in the "_posts" folder called 'YYYY-MM-DD-post-name.md', where YYYY is the year (2023), MM numeric month (01-12), and DD is the numeric day of the month (01-31).  The "post-name" is a short name for the new post with - between words.  **You must use this name convention for all new posts.**  
-
-2.  Make the YML heading.  All pages in the site need to start with a YML heading.  For posts you should use
-```
----
-layout: post
-title:  "Post Name"
-author: Your name
-description: Short yet informative description
-image: /assets/images/blog-image.jpg
----
-```
-Note that the layout should stay as "post", but all the other fields you need to update with the information for your particular blog post.  The blog image should be a .jpg or .png file that you should add to the folder "assets/images".  Don't make it too large or the page will take longer to load (500-800 KB is a good size).  The file path should be okay to leave as "/assets/images/" in the header area.  
-
-3.  Write the body of the blog using markdown.  For more information about writing with markdown, see the following 
-* [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
-* [Markdown Guide](https://www.markdownguide.org/cheat-sheet/)
-* [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
-
-## Adding Images
-Images for the blog will generally but put into the 'assets/images' folder.  You can aslo create a subfolder for each blog post if you'd like to keep your figures organized.  **I've found that in the body of the post, it works better to use a url pointing to the figure's location.**  In order to find the appropriate url, navigate to the figure in the repository and find the "download" url.  The correct url will typically have the work "raw" either at the beginning or as `/raw/` in the middle somewhere. For example:
 
 ```
-![Figure](https://raw.githubusercontent.com/esnt/my386blog/main/assets/images/default.jpg)
+amateur_matches = []
+for user in range(5):
+  summoner_name = summoner_info_amateur[user][0]
+  region = summoner_info_amateur[user][2]
+  puuid = summoner_info_amateur[user][1]
+  matchlist_url = f'https://{region}.api.riotgames.com/lol/match/v5/matches/by-puuid/{puuid}/ids'
+  params = {'api_key': api_key}
+  response = requests.get(matchlist_url, params=params)
+  match_ids = response.json()
+  print(match_ids) # Use this to check if it is catching the IDs or if you get request timed-out.
 
-OR
-
-![Figure](https://github.com/esnt/my386blog/raw/main/assets/images/default.jpg)
+  # Use the match IDs to retrieve the details for each match
+  for match_id in match_ids:
+      match_url = f'https://{region}.api.riotgames.com/lol/match/v5/matches/{match_id}'
+      response = requests.get(match_url, params=params)
+      match_data = response.json()
+      amateur_matches.append(match_data)
 ```
 
-![Figure](https://raw.githubusercontent.com/esnt/my386blog/main/assets/images/default.jpg)
+Which will return a list of matchIDs that will look something like this.
 
-### Resizing images
+NOTE: Each username will return the 20 most recent games.
 
-There isn't a good way to resize images with markdown, so if you need to resize an image, use the html code to insert your figure (instead of the markdown code):
+```
+['NA1_4603604702', 'NA1_4603585297', 'NA1_4603572865', 'NA1_4603418804', 'NA1_4603383476', 'NA1_4603354728', 'NA1_4598815302', 'NA1_4598794292', 'NA1_4598773252', 'NA1_4598748127', 'NA1_4598336448', 'NA1_4598303667', 'NA1_4598273712', 'NA1_4598013655', 'NA1_4597995969', 'NA1_4597969133', 'NA1_4597947847', 'NA1_4595651152', 'NA1_4595613524', 'NA1_4595590485']
+['NA1_4603633393', 'NA1_4603559905', 'NA1_4600075100', 'NA1_4600038821', 'NA1_4599988273', 'NA1_4598417241', 'NA1_4598375527', 'NA1_4597533475', 'NA1_4597514492', 'NA1_4597504896', 'NA1_4593476789', 'NA1_4593452337', 'NA1_4593441905', 'NA1_4593418132', 'NA1_4593388278', 'NA1_4593053027', 'NA1_4593028434', 'NA1_4592926754', 'NA1_4592895152', 'NA1_4587257018']
+['NA1_4545116508', 'NA1_4545069206', 'NA1_4533195909', 'NA1_4533135946', 'NA1_4531045333', 'NA1_4531032874', 'NA1_4531011847', 'NA1_4493629097', 'NA1_4493586951', 'NA1_4493540400', 'NA1_4478426048', 'NA1_4457448380', 'NA1_4457422789', 'NA1_4457375337', 'NA1_4455467146', 'NA1_4455502730', 'NA1_4455419174', 'NA1_4455434865', 'NA1_4455450913', 'NA1_4455385558']
+['NA1_4603656272', 'NA1_4603553086', 'NA1_4603504636', 'NA1_4602058892', 'NA1_4601926967', 'NA1_4600402951', 'NA1_4600367079', 'NA1_4600332625', 'NA1_4600247741', 'NA1_4597876466', 'NA1_4597868737', 'NA1_4596661213', 'NA1_4596622349', 'NA1_4596597858', 'NA1_4596164485', 'NA1_4596028568', 'NA1_4596014443', 'NA1_4595335488', 'NA1_4595313623', 'NA1_4595283734']
+['NA1_4600986875', 'NA1_4600944073', 'NA1_4600075100', 'NA1_4600038821', 'NA1_4599988273', 'NA1_4599933620', 'NA1_4599844392', 'NA1_4599772492', 'NA1_4599737705', 'NA1_4598417241', 'NA1_4598375527', 'NA1_4593798123', 'NA1_4593772656', 'NA1_4593476789', 'NA1_4593452337', 'NA1_4593441905', 'NA1_4593418132', 'NA1_4593388278', 'NA1_4593352175', 'NA1_4593334765']
+```
 
-`<img src="https://raw.githubusercontent.com/esnt/my386blog/main/assets/images/default.jpg" alt="" style="width:400px;"/>`
+Lastly, I'd like to combine all my lists into one list now so I have an easier time accessing information from one place and I'm done making requests.
 
-(Width is 400 pixels)
-<img src="https://raw.githubusercontent.com/esnt/my386blog/main/assets/images/default.jpg" alt="" style="width:400px;"/>
+```
+matches = [pro_matches, amateur_matches]
+```
 
+## Step 5: Variable Selection and Data Extraction
 
-`<img src="https://raw.githubusercontent.com/esnt/my386blog/main/assets/images/default.jpg" alt="" style="width:100px;"/>`
+Since I'm only interested in vision metrics and the win/loss outcome, I've skimmed through all the data recorded in {matches} and decided on a few relevant details. I made a dictionary with empty lists that I can append new data I read into it later.
 
-(Width is 100 pixels)
-<img src="https://raw.githubusercontent.com/esnt/my386blog/main/assets/images/default.jpg" alt="" style="width:100px;"/>
+```
+match_dict = {'teamPosition': [], 'visionScore': [], 
+            'visionWardsBoughtInGame': [], 'wardsKilled': [], 'wardsPlaced': [],
+            'win' : []}
+```
 
----
+And then I will loop through the data in {matches} and dead it into my dictionary.
 
-## Troubleshooting
+```
+for elo in range(len(matches)):
+  for game in range(len(matches[elo])):
+    if 'info' in matches[elo][game]:
+      for participant in range(len(matches[elo][game]['info']['participants'])):
+        if str(matches[elo][game]['info']['participants'][participant]['puuid']) in puuids:
+            match_dict['teamPosition'].append(matches[elo][game]['info']['participants'][participant]['teamPosition'])
+            match_dict['visionScore'].append(matches[elo][game]['info']['participants'][participant]['visionScore'])
+            match_dict['visionWardsBoughtInGame'].append(matches[elo][game]['info']['participants'][participant]['visionWardsBoughtInGame'])
+            match_dict['wardsKilled'].append(matches[elo][game]['info']['participants'][participant]['wardsKilled'])
+            match_dict['wardsPlaced'].append(matches[elo][game]['info']['participants'][participant]['wardsPlaced'])
+            match_dict['win'].append(matches[elo][game]['info']['participants'][participant]['win'])
+```
 
-Here are some things to keep in mind if your blog appearance isn't going as you planned:
+Finally, with {match_dict} all filled out, I will turn it into a data frame with pandas.
 
-**Problem:  The blog post that I created isn't appearing**
+```
+match_df = pd.DataFrame(match_dict)
+```
 
-Possible Solutions: 
-  - Check your date. GitHub pages won't display blog posts with future dates
-  - Check the yaml header.  If there are any special characters in any of the fields, you need to use quotes around the entire field entry.  The most common culprit is the description.  If you're having trouble, try putting quotes around the entire description
+{match_df} should now output
 
----
-
-**Problem:  I know that I made changes to a blog post but the changes aren't appearing**
-
-Possible Solution:
-  - Check the header.  If there are any special characters in any of the fields, you need to use quotes around the entire field entry.  The most common culprit is the description.  If you're having trouble, try putting quotes around the entire description.
-
----
-
-**Problem:  My entire blog has wierd formatting**
-
-Possible Solution:
-  - Usually this is an address problem.  Double check your url and baseurl in the _config file
+![Figure]()
