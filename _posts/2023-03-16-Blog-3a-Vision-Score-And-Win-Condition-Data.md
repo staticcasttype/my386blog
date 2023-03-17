@@ -157,4 +157,12 @@ match_df = pd.DataFrame(match_dict)
 
 {match_df} should now output
 
-![Figure]()
+![Figure](https://github.com/staticcasttype/my386blog/blob/main/assets/images/matches_df.png)
+
+# Reflection
+
+There are some missing values in the data that need to be cleaned, which will put us considerably under the 200 observation expectation for this project, but this can easily be solved by throwing in a few additional summoner accounts to gain new observations from. Since I coded this extraction technique to work well with lists of any size, and multiple starting dictionaries (username/PUUID/region), it would be no problem to introduce additional observations into the data.
+
+In my next post, I'll do a little bit of analysis on the data to see just how impactful vision is in games. As a support main, I care a lot about warding, and it is one of my top priorities when I play, so I'm interested to see if what I lack in DPS, I more than make up for with map control and itemization.
+
+Through this portion of the project, I learned that there is a lot you can do with Riot's API. Please consider using my method (or let me know of other ways) to collect other information from matches for data analysis of what elements are conducive to game-winning conditions.
