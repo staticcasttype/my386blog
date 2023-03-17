@@ -20,11 +20,11 @@ I used Python to complete this project as well as the Requests package, and the 
 
 ## Step 1: Obtain the API Key
 
-It's easy to obtain an API key from Riot Games. At the site https://developer.riotgames.com/ you can request an API key that will expire 24 hours after you request it. So over the course of a week I've had to request a new one a couple of times.
+It's easy to obtain an API key from Riot Games. At [the site](https://developer.riotgames.com/) you can request an API key that will expire 24 hours after you request it. So over the course of a week I've had to request a new one a couple of times.
 
 ![Figure](https://apipheny.io/wp-content/uploads/2020/04/1-6.jpg)
 
-You can also find all the different endpoints available at https://developer.riotgames.com/apis. This allows you to find the code to query it yourself, or you can even use it to generate the information directly for you if you want the output fast.
+You can also find all the different endpoints available [here](https://developer.riotgames.com/apis). This allows you to find the code to query it yourself, or you can even use it to generate the information directly for you if you want the output fast.
 
 ## Step 2: Setting Up Your Code
 
@@ -157,7 +157,7 @@ match_df = pd.DataFrame(match_dict)
 
 {match_df} should now output
 
-![Figure](https://github.com/staticcasttype/my386blog/blob/main/assets/images/matches_df.png)
+![Figure](https://github.com/staticcasttype/my386blog/blob/dd5437dee01083cfc3d7e944f2f81793ece5b8bf/assets/images/matches_df.png)
 
 # Reflection
 
