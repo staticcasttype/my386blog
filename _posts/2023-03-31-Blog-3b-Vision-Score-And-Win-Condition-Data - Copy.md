@@ -10,7 +10,7 @@ image: /assets/images/lolmap.png
 
 Welcome back! In our previous blog post, we discussed the importance of Vision Score in League of Legends and the steps we took to collect match data from Riot Games' API. In this post, we will delve deeper into the data and present our findings after conducting some exploratory data analysis. We will explore various aspects of the data, such as the average Vision Score and win rate by team position and Vision cd 3  Score range. By the end of this blog post, we hope to provide valuable insights into the relationship between Vision Score and winning games, which can be beneficial for players looking to improve their chances of success in League of Legends. So let's jump into the exciting world of data analysis and League of Legends!
 
-# Data
+# Data Visualizations
 
 ## Figure 1: Correlation Matrix
 ![Figure](https://raw.githubusercontent.com/staticcasttype/my386blog/main/assets/images/corrmatrix.png)
@@ -30,9 +30,14 @@ I wanted to make a pairplot and separate colors based off of wins and losses to 
 
 
 ## Figure 4:
+![Figure]
 
+Here, I split up the vision metric across each position to see noticable differences between the roles. I include this with the hopes of helping those who do not play League of Legends, or any similar MOBA games, with an idea of the difference in vision between roles. Typically support (utility) leads the game in vision score, with Top lane having the least vision priority, compared to other roles.
 
+## Figure 5:
+![Figure]
 
+Here is a cut-and-dry visual of the average vision metrics of all the winning games, and all the losing games. We can see here once again that the more vision equals a better chance of winning, with the exception of the 'wardsKilled' variable.
 
 # Reflection
 
