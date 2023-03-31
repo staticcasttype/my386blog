@@ -13,7 +13,11 @@ Welcome back! In our previous blog post, we discussed the importance of Vision S
 # Data
 
 ## Figure 1: Correlation Matrix
-/assets/images/corrmatrix.png
+1
+![](/assets/images/corrmatrix.png)
+2
+![](corrmatrix.png)
+
 
 First off, I wanted to start with a correlation matrix to see if there was anything immediately unique about the data. Typically, vision score is good in games, so I was expecting each metric of vision to be positively associated with winning- however, you can see that the 'wardsKilled' metric is actually slightly negatively correlated with a win. My sample size is extremely small, but this still surprised me. I hypothesize that this could be because of players who prioritize taking down enemy wards even when they are not in a safe place, leading to a gank, a death, and gold for the enemy team.
 
