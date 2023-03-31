@@ -3,17 +3,17 @@ layout: post
 title:  "EDA: Vision Score and Win Condition"
 author: Stephanie Clark
 description: Using data collected through the Riot Games API, I perform a brief EDA of our data to search for insights.
-image: /assets/images/wards.png
+image: /assets/images/lolmap.png
 ---
 
 # Introduction
 
-Welcome back! In our previous blog post, we discussed the importance of Vision Score in League of Legends and the steps we took to collect match data from Riot Games' API. In this post, we will delve deeper into the data and present our findings after conducting some exploratory data analysis. We will explore various aspects of the data, such as the average Vision Score and win rate by team position and Vision Score range. By the end of this blog post, we hope to provide valuable insights into the relationship between Vision Score and winning games, which can be beneficial for players looking to improve their chances of success in League of Legends. So let's jump into the exciting world of data analysis and League of Legends!
+Welcome back! In our previous blog post, we discussed the importance of Vision Score in League of Legends and the steps we took to collect match data from Riot Games' API. In this post, we will delve deeper into the data and present our findings after conducting some exploratory data analysis. We will explore various aspects of the data, such as the average Vision Score and win rate by team position and Vision cd 3  Score range. By the end of this blog post, we hope to provide valuable insights into the relationship between Vision Score and winning games, which can be beneficial for players looking to improve their chances of success in League of Legends. So let's jump into the exciting world of data analysis and League of Legends!
 
 # Data
 
 ## Figure 1: Correlation Matrix
-![Figure](/assets/images/corrmatrix.png)
+/assets/images/corrmatrix.png
 
 First off, I wanted to start with a correlation matrix to see if there was anything immediately unique about the data. Typically, vision score is good in games, so I was expecting each metric of vision to be positively associated with winning- however, you can see that the 'wardsKilled' metric is actually slightly negatively correlated with a win. My sample size is extremely small, but this still surprised me. I hypothesize that this could be because of players who prioritize taking down enemy wards even when they are not in a safe place, leading to a gank, a death, and gold for the enemy team.
 

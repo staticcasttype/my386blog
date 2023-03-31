@@ -21,7 +21,7 @@
 title: Stephanie's Blog # Make a title for your blog
 email: slynndersen@gmail.com # Add your email 
 description: >- # this means to ignore newlines until "baseurl:"
- I'm writing blogs for my STAT 386 class.
+ I write blogs about data science to mask my addiction for video games.
 baseurl: "/my386blog" # keep this the same or change it to the name of the repository 
 url: "https://staticcasttype.github.io" #  change this to "https://<your-github-username>.github.io"
 image: /assets/images/worlds2022.jpg
@@ -33,9 +33,9 @@ twitter_username:
 github_username:  staticcasttype
 linkedin_username: stephlynnclark
 dribbble_username: 
-facebook_username: lies.and.slandersen
+facebook_username: 
 flickr_username:
-instagram_username: timestep_stephanie
+instagram_username: 
 pinterest_username:
 youtube_username: 
 googleplus_username: 
