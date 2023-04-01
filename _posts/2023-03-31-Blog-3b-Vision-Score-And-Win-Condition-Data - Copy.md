@@ -24,25 +24,21 @@ First off, I wanted to start with a correlation matrix to see if there was anyth
 Next, I was interested in the counts of each variable and thought a visual representation would be nicer than a printed list of counts. This helps you to visualize what the vision score for a typical game might look like. For example, on the first axis, the 'visionScore' histogram, we can see a peak around 20, meaning that 20 was the vision score we saw in just over 50 of the matches recorded in the dataset. SImilarly, the number of wards bought in the game on the upper right axis, 'visionWardsBoughtInGame', there were over 100 games where the player did not buy any vision wards. I suspect that this is largely skewed by the amount of non-support (utility) roles that I included in my data, since vision is largely the responsiblity of the support (utility) player.
 
 ## Figure 3:
-![Figure]
+![Figure](https://raw.githubusercontent.com/staticcasttype/my386blog/main/assets/images/snspairplot.png)
 
 I wanted to make a pairplot and separate colors based off of wins and losses to see if there were any visual outliers between wins and losses for different vision metrics. This graph I didn't find to be particularly useful by itself, although it is fun to look at.
 
 
 ## Figure 4:
-![Figure]
+![Figure](https://raw.githubusercontent.com/staticcasttype/my386blog/main/assets/images/avgbyposition.png)
 
 Here, I split up the vision metric across each position to see noticable differences between the roles. I include this with the hopes of helping those who do not play League of Legends, or any similar MOBA games, with an idea of the difference in vision between roles. Typically support (utility) leads the game in vision score, with Top lane having the least vision priority, compared to other roles.
 
 ## Figure 5:
-![Figure]
+![Figure](https://raw.githubusercontent.com/staticcasttype/my386blog/main/assets/images/avgvisionwinloss.png)
 
 Here is a cut-and-dry visual of the average vision metrics of all the winning games, and all the losing games. We can see here once again that the more vision equals a better chance of winning, with the exception of the 'wardsKilled' variable.
 
 # Reflection
 
-There are some missing values in the data that need to be cleaned, which will put us considerably under the 200 observation expectation for this project, but this can easily be solved by throwing in a few additional summoner accounts to gain new observations from. Since I coded this extraction technique to work well with lists of any size, and multiple starting dictionaries (username/PUUID/region), it would be no problem to introduce additional observations into the data.
-
-In my next post, I'll do a little bit of analysis on the data to see just how impactful vision is in games. As a support main, I care a lot about warding, and it is one of my top priorities when I play, so I'm interested to see if what I lack in DPS, I more than make up for with map control and itemization.
-
-Through this portion of the project, I learned that there is a lot you can do with Riot's API. Please consider using my method (or let me know of other ways) to collect other information from matches for data analysis of what elements are conducive to game-winning conditions.
+In this blog I shared a few graphs that give insight into the role vision plays in a match. Most of the information was information that I had expected to see just by my intuition of how the game works. That being said, I still uncovered some statistics that surprised me. If you have ideas to further my EDA, please leave your idea in a comment below!
