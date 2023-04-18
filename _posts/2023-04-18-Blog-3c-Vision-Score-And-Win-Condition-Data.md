@@ -18,7 +18,8 @@ Maybe not.
 
 Typically, it is the support's job to maintain vision throughout the map. As a support main myself, I make sure to prioritize my vision score because I believe it means I'm helping my team. However, when we separate each vision metric along each role and compare the averages for wins and losses, what we find is surprising.
 
-# Average Vision Metric of Wins and Losses Against Every Role
+# Data Visualization
+##### Vision across Position and Win Condition
 
 ![Figure](https://raw.githubusercontent.com/staticcasttype/my386blog/main/assets/images/datastorytelling.png)
 
