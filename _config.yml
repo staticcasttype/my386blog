@@ -18,20 +18,20 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Stephanie's Blog # Make a title for your blog
+title: Data 2 # Make a title for your blog
 email: slynndersen@gmail.com # Add your email 
 description: >- # this means to ignore newlines until "baseurl:"
- I write blogs about data science to mask my addiction for video games.
+ Writing blogs about data science to mask my addiction for video games.
 baseurl: "/my386blog" # keep this the same or change it to the name of the repository 
 url: "https://staticcasttype.github.io" #  change this to "https://<your-github-username>.github.io"
 image: /assets/images/worlds2022.jpg
-author: Stephanie Clark
+author: Stephanie Andersen
 copyright: sct # Your initials or what you want the copyright to be.  Leave empty for no copyright
 
 # Social media users names.  Leave fields blank that you don't want displayed
 twitter_username: 
 github_username:  staticcasttype
-linkedin_username: stephlynnclark
+linkedin_username: slandersen
 dribbble_username: 
 facebook_username: 
 flickr_username:
