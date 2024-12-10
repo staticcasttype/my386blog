@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Opinion: Weapons of Math Destruction by Cathy O'Neil"
-author: Stephanie Clark
+author: Stephanie Andersen
 description: A few of my opinions on the famous book by Cathy O'Neil.
 image: /assets/images/bookreport.png
 ---

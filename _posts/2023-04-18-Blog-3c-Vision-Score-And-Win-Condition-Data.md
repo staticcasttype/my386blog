@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Vision Score and Win Condition: Supports Shouldn't Ward?!"
-author: Stephanie Clark
+author: Stephanie Andersen
 description: The "ultimate" answer to how warding affects your win rate, and why you shouldn't prioritize vision as a support.
 image: /assets/images/keriasaysnotowards.png
 ---

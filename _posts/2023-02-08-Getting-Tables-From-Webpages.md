@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How to Get a Table from a Webpage"
-author: Stephanie Clark
+author: Stephanie Andersen
 description: A League of Legends themed data extraction technique.
 image: /assets/images/rell.png
 ---

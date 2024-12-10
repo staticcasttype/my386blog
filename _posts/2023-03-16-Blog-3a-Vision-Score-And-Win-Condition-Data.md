@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Data Collection: Vision Score and Win Condition"
-author: Stephanie Clark
+author: Stephanie Andersen
 description: I used the Riot Games API to collect match data on both low elo and professional LoL players to see if we could explore any correlation between vision scoring and win conditions.
 image: /assets/images/wards.png
 ---

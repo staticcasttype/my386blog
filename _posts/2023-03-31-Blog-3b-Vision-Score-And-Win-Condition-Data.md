@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "EDA: Vision Score and Win Condition"
-author: Stephanie Clark
+author: Stephanie Andersen
 description: Using data collected through the Riot Games API, I perform a brief EDA of our data to search for insights.
 image: /assets/images/lolmap.png
 ---
